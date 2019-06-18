@@ -12,6 +12,7 @@ class EmojiDict extends Component {
 		return (
 			<View style={styles.container}>
 				<Text>{this.state['😃']}</Text>
+				<Text>{this.state['🚀']}</Text>
 			</View>
 		);
 	}
