@@ -10,10 +10,15 @@ class EmojiDict extends Component {
 
 	render() {
 		return (
-			<View style={styles.container}>
-				<Text>{this.state['😃']}</Text>
-				<Text>{this.state['🚀']}</Text>
-			</View>
+            <FlatList
+	contentContainerStyle={styles.container}
+	data={[
+		{ key: '😃', value: '😃 Smiley' },
+		{ key: '🚀', value: '🚀 Rocket' },
+		{ key: '⚛️', value: '⚛️ Atom Symbol' }
+	]}
+	renderItem={({ item }) => <Text>{item.value}</Text>}
+/>
 		);
 	}
 }
